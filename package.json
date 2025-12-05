@@ -21,6 +21,7 @@
   "homepage": "https://github.com/YugantBandawar/Practice_Backend#readme",
   "dependencies": {
     "accessibility": "^3.0.9",
+    "cookie-parser": "^1.4.7",
     "express": "^5.2.1",
     "one-liner-joke": "^1.2.2"
   },
