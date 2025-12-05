@@ -1,62 +1,67 @@
-var arr=[1,2,3,4];
+// const fs=require('fs');
+// fs.writeFile("hey.txt","hey How are you?",function(err){
+//     if(err){console.log(err);}
+//     else{console.log("done");}
+// })
+//callback-function
 
-//Foreach:
-// arr.forEach(function(val){
-//     console.log(val+" hello");
+//fs.appendfile(path,data,callback)
+// fs.appendFile("hey.txt","I am fine",function(err){
+//     if(err){console.log(err);}
+//     else{console.log("done");}
 // })
 
-//Map:
-// var newarr=arr.map(function(val){
-//    return val*3;
-// })
-// console.log(newarr);
+//Rename-fs.rename(name,newname,callback)
+// fs.rename("hey.txt","hello.txt",function(err){
+//     if(err) {
+//         console.log(err);
+//     }
+//     else{
+//         console.log("done");
+//     }
 
-//filtr:
-// var ans=arr.filter(function(val){
-//     if(val>3){
-//         return true;
+// })
+
+ 
+//fs.copyfile(scr,dest,callback)
+
+// fs.copyFile("hello.txt","./copy/fil.txt",function(err){
+//     if(err){
+//         console.log(err);
+//     }
+//     else{
+//         console.log("done");
 //     }
 // })
-// console.log(ans)
 
-// find
-// var ans=arr.find(function(val){
-//     if(val==2) return val;
+//Remove the file
+
+// fs.unlink("hello.txt",function(err){
+//     if(err){
+//         console.log.error(err);
+//     }
+//     else{
+//         console.log("removed");
+//     }
 // })
-// console.log(ans);
 
-//indexOf:Gives Index
-// var ans=arr.indexOf(1);
-// console.log(ans);
+//Remove the Directory:forcefully removed directory
 
-//Objects:key-value Pair
-// var obj={
-//     name:"harsh",
-//     age:"12"
-// }
-// console.log(obj.name);
-// obj.age=25; //Changes the value
-// Object.freeze(obj);// Cannot change the value of obj
-// console.log(obj);
+// fs.rm("./copy",{recursive:true},function(err){
+//     if(err){
+//         console.error(err);
+//     }
+//     else{
+//         console.log("removed");
+//     }
+// })
 
-//How to find Length of function:Number of paramete is Lenght of Function
-// function abcd(a,b,c){//length is 3
+// http
+// protocol-rules
 
-// }
-// abcd.len
+const http=require('http');
 
-// function abcd(){
-//     return 12;
-// }
-
-// var ans=abcd(); //The call will go to line 48 then retun 12 And will come to line 52 and write 12 in "ans"
-
-//What is Synchronous?:Code is run Line by Line
-//Jo bhi code async nature ka Ho,usey side stack mein bhej do and agle code ko chalao jo bhi sync nature ka ho,jab bhi saara syn code chal jaaye ,tab ch3ck kaaro ki async code complete hua ya nahi and agar wo complete hua ho to usey main stack mein laao and chalao
-
-async function  abcd(){
-    var blob=await fetch(`https://randomuser.me/api/`);
-    var ans=await blob.json();
-    console.log(ans.results[0]);
-}
-abcd();
+const server=http.createServer(function(req,res){
+      res.end("hello world");
+})
+server.listen(3000);
