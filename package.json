@@ -4,6 +4,7 @@
   "description": "��#\u0000 \u0000P\u0000r\u0000a\u0000c\u0000t\u0000i\u0000c\u0000e\u0000_\u0000B\u0000a\u0000c\u0000k\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000",
   "main": "script.js",
   "scripts": {
+    "start":"node script.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/YugantBandawar/Practice_Backend/issues"
   },
-  "homepage": "https://github.com/YugantBandawar/Practice_Backend#readme"
+  "homepage": "https://github.com/YugantBandawar/Practice_Backend#readme",
+  "dependencies": {
+    "accessibility": "^3.0.9",
+    "one-liner-joke": "^1.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
 }
